@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Js Part 4</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css">
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- Google Fonts Roboto -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css" rel="stylesheet">
+    <!-- Vue JS CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+<body>
+    <div id="root">
+        <div class="container">
+            <h2 class="title">{{ name }}</h2>
+            <input type="text" @keyup="nameChange">
+        </div>
+    </div>
+
+    <script>
+        var root = new Vue({
+            el: '#root',
+            data: {
+                name: 'Azizul'
+            },
+            methods: {
+                nameChange: function(event){
+                    this.name = event.target.value;
+                    console.log(this.name);
+                }
+            }
+        })
+    </script>
+
+    <!-- <script src="app.js" type="text/babel"></script> -->
+</body>
+</html>

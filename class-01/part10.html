@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Js Part 10</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css">
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- Vue JS CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root">
+        <div class="container">
+            <div class="columns is-vcentered">
+                <div class="column">
+                    <h1 class="title h1">Vue js part 10</h1>
+                    <hr>
+                </div>
+            </div>
+            <div class="columns is-vcentered is-centered">
+                <div class="column">
+                    <p class="subtitle">Looping</p>
+                    <ol>
+                        <li v-for="name in names">{{ name }}</li>
+                    </ol>
+
+                    <ul>
+                        <li v-for="(fruit, key) in fruites">{{ key + 1 }}->{{ fruit.name }} {{ fruit.price }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var root = new Vue({
+            el: '#root',
+            data: {
+                names: ['Azizul', 'Rita', 'Shamima', 'Ritu'],
+                fruites: [
+                    {name: 'Apple', price: 20},
+                    {name: 'Mango', price: 30},
+                    {name: 'Orange', price: 40},
+                    {name: 'Banana', price: 50}
+                ]
+            },
+            methods: {
+                greet: function(time){
+                    return 'Good ' + time + ' ' + this.name;
+                }
+            },
+            computed: {
+                ok: function(){
+                    return 'Good ' + this.time + ' ' + this.name;
+                }
+            }
+        })
+    </script>
+</body>
+</html>

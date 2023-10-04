@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue js Day 2</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css">
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- Vue JS CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+    <div id="root" class="container">
+
+        <div class="columns">
+
+            <div class="column">
+
+                <h1 :style="{ color: color }">{{ message }}</h1>
+
+                <h1 :style="style">{{ message }}</h1>
+
+                <a :href="link" target="_blank">{{ message }}</a>
+
+                <h3 :style="style" style="font-weight: bolder;">Name: {{ Myname() }} Age:{{ Myage() }}</h3>
+                <h3 style="font-weight: bolder;">{{ Mymessage(23) }}</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="app.js" type="text/babel"></script>
+    
+</body>
+</html>

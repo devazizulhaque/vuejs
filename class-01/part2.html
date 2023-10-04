@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue js part 2</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css">
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- Google Fonts Roboto -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    
+    <!-- Vue JS CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <style>
+        .one{
+            background-color: cadetblue;
+            color: white;
+            border: 2px solid;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+        .two{
+            color: rgb(63, 61, 61);
+        }
+        .three{
+            font-size: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="root">
+        <h1 :style="style" :class="myArray">Vue js Part 2</h1>
+        <hr>
+
+        <h2>Conditional Rendering {{ Mydollar() }}</h2>
+        <button :class="classes" @click="Amount(1)">+1</button>
+        <button :class="classes" @click="Amount(-1)">-1</button>
+
+        <!-- <button  v-on:click="dollar++">+1</button>
+        <button v-on:click="dollar--">-1</button> -->
+
+        <!-- <p v-if="seen">Now you see me</p>
+        <p v-else>Now you don't</p> -->
+        <!--         <button @click="seen = ! seen">{{ seen ? 'Hide' : 'Show' }}</button>-->
+        <!-- <button @click="toggle">Toggle</button> -->
+
+        
+    </div>
+
+    <script src="app.js" type="text/babel"></script>
+</body>
+</html>

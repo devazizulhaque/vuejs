@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Js Part 3</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css">
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- Google Fonts Roboto -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css" rel="stylesheet">
+    <!-- Vue JS CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <style>
+        .canvas{
+            height: 240px;
+            width: 240px;
+            margin-top: 20px;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <div class="container mt-5">
+            <h1 :style="style" :class="myArray">Vue js Part 3</h1>
+            <hr>
+            <h2>Event Handling</h2>
+            <button class="btn btn-amber" @click="Greet()">Greet</button>
+            <button class="btn btn-amber" @click="Submit">Submit</button>
+            <!-- <h1>{{ message }}</h1> -->
+
+            <div class="canvas" @mousemove="over">
+                {{ log.x }}, {{ log.y }}
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js" type="text/babel"></script>
+</body>
+</html>

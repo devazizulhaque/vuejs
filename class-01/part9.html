@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Js Part 9</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css">
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- Vue JS CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root" class="container">
+        <div class="columns">
+            <div class="column">
+                <h1 class="title h1">Vue js part 9</h1>
+                <hr>
+            </div>
+        </div>
+        <div class="columns is-vcentered is-centered">
+            <div class="column">
+                <p class="subtitle" v-if="name">Hello Vue</p>
+                <p class="subtitle" v-else-if="age">23</p>
+                <p class="subtitle" v-else>Nothing</p>
+                <button @click="showName">Show Name | {{ name }}</button>
+                <button @click="showAge">Show Age | {{ age }}</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var root = new Vue({
+            el: '#root',
+            data: {
+                name: true,
+                age: true
+            },
+            methods: {
+                add: function(){
+                    this.age++;
+                },
+                subtract: function(){
+                    this.age--;
+                },
+                showName: function(){
+                    this.name = !this.name
+                },
+                showAge() {
+                    this.age = !this.age
+                },
+
+            },
+            computed: {
+                addToA: function(){
+                    console.log('addToA');
+                    return this.age + this.a;
+                },
+                addToB: function(){
+                    console.log('addToB');
+                    return this.age + this.b;
+                }
+            },
+        })
+    </script>
+    
+</body>
+</html>
